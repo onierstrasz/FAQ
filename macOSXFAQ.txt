@@ -200,7 +200,6 @@ After downloading but before installer, find the installer in the Applications f
 * How to ignore updates?
 - sudo /usr/sbin/softwareupdate --ignore "macOS Catalina" 
 - sudo /usr/sbin/softwareupdate --reset-ignored	
-[Tweet from James Grenning (‪@jwgrenning‬) 25.10.19, 15:39]
 
 ---
 
