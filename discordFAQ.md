@@ -1,6 +1,6 @@
 # Discord FAQ
 
-Q How to mark all messages as read?
+## Q How to mark all messages as read?
 
-For a single server: <SHIFT><ESC>
+For a single server: `<SHIFT><ESC>`
 
