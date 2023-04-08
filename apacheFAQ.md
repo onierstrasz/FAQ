@@ -52,6 +52,19 @@ In a pinch you can also try to modify the lines:
 
 to the actual user and group.
 
+## Q How to override DNS lookups?
 
-## Q Why can't apache access symbolink links to the Documents folder from the Sites folder?
+Edit `/etc/hosts`
 
+Simply add
+```
+127.0.0.1	scg.unibe.ch
+```
+No apache restart is needed
+
+For example, to see the old web site on cindy
+```
+130.92.64.123 scg.unibe.ch
+```
+
+You can also then set the DocumentRoot to point to wherever you like.
