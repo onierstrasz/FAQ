@@ -1,5 +1,7 @@
 # Ink2Go FAQ
 
+[Ink2Go](http://ink2go.org/) can be used during online presentations to draw or highlight on the screen.
+
 ## Q How do I turn off textual displays of change in mode?
 
 `Preferences > Aopplication > General > Show text annunciation`
