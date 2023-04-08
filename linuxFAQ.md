@@ -33,7 +33,7 @@ On calculon:
 sudo realm permit -R campus.unibe.ch <campus-id>@campus.unibe.ch
 ```
 
-## Q How do I give a user sudo rights (Ubuntu)
+## Q How do I give a user sudo rights? (Ubuntu)
 ```
 sudo usermod -a -G sudo <user>
 ```
@@ -49,7 +49,7 @@ cat /etc/passwd
 cat /etc/issue
 ```
 
-## Q How do I install stuff
+## Q How do I install stuff?
 ```
 sudo aptitude
 ```
