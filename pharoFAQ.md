@@ -120,14 +120,16 @@ This is the workaround:
 (FileLocator imageDirectory asFileReference / 'Calls.txt') contents
 ```
 
-* How do I browse for a file from the file system?
+## Q How do I browse for a file from the file system?
+```
+(UITheme builder fileOpen: 'Import file') contents
+```
 
-  (UITheme builder fileOpen: 'Import file') contents
+## Q How do I run an expression with a progress bar?
 
-* How do I run an expression with a progress bar?
-
-* How do I open a FileReference to a directory?
-
-    FileReference fileSystem: FileSystem disk path: '/Users/oscar/Dropbox/Mongo/import/sira-members' asPath.
+## Q How do I open a FileReference to a directory?
+```
+FileReference fileSystem: FileSystem disk path: '/Users/oscar/Dropbox/Mongo/import/sira-members' asPath.
+```
 
 ---
