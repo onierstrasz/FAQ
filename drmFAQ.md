@@ -1,6 +1,6 @@
 # DRM Removal FAQ
 
-* Q How to remove DRM from Kindle?
+## Q How to remove DRM from Kindle?
 
 Download and install Kindle and Calibre apps
 
@@ -21,5 +21,6 @@ and drag all .azw files to Calibre
 Select the books and convert to ePub.
 
 
-* Q How to remove Adobe DRM?
+## Q How to remove Adobe DRM?
 
+... todo
