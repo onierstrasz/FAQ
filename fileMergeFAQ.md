@@ -1,9 +1,9 @@
 # FileMerge FAQ
 
-* Q The fonts and colors are all wrong. How do I fix it?
+## Q The fonts and colors are all wrong. How do I fix it?
 
-- Delete ~/Library/Preferences/com.apple.FileMerge.plist
+- Delete `~/Library/Preferences/com.apple.FileMerge.plist`
 
-* Q Where is FileMerge?
+## Q Where is FileMerge?
 
-- Now it is in /Applications/Xcode.app/Contents/Applications/FileMerge.app
+- Now it is in `/Applications/Xcode.app/Contents/Applications/FileMerge.app`

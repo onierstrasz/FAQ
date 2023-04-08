@@ -1,10 +1,10 @@
 # Apache FAQ
 
-* How to start apache?
+# Q How to start apache?
 
 	sudo apachectl start
 
-* Q How to enable user Sites on Mac?
+# Q How to enable user Sites on Mac?
 
 https://iraspa.org/blog/setting-up-apache-user-sites-folders-on-macos/
 
@@ -53,5 +53,5 @@ In a pinch you can also try to modify the lines:
 to the actual user and group.
 
 
-* Q Why can't apache access symbolink links to the Documents folder from the Sites folder?
+## Q Why can't apache access symbolink links to the Documents folder from the Sites folder?
 

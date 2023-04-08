@@ -1,48 +1,55 @@
 # Ink2Go FAQ
 
-Q How do I turn off textual displays of change in mode?
+[Ink2Go](http://ink2go.org/) can be used during online presentations to draw or highlight on the screen.
 
-Preferences > Aopplication > General > Show text annunciation
+## Q How do I turn off textual displays of change in mode?
 
-NB: To show preferences, enable toolbar and pick an item
+`Preferences > Aopplication > General > Show text annunciation`
 
-Q What is the usual workflow?
+**NB:** To show preferences, enable toolbar and pick an item
 
-	Option + Shift + A (activate)
-	H (highlight) or P or S
-	(draw)
-	Cmd + X (Clear)
-	Escape (cursor)
+## Q What is the usual workflow?
 
-Q What are all the keyboard shortcuts?
+```
+Option + Shift + A	(activate)
+H 			(highlight) or 
+P or S			(draw)
+Cmd + X			(Clear)
+Escape			(cursor)
+```
 
-Toggle toolbar 	Command + H
+## Q What are all the keyboard shortcuts?
 
+```
+Toggle toolbar 		Command + H
 Activate		Option + Shift + A
-Activate + Pen	Option + Shift + P
+Activate + Pen		Option + Shift + P
+```
 
-* Annotation
-
-Pen				P
+### Annotation
+```
+Pen			P
 Highlighter		H
 Eraser			E
 Cursor			Escape
 Text			T
 Shape			S
 Clear			Cmd + X
+```
 
-* Stroke Thickness / Shape
-
+### Stroke Thickness / Shape
+```
 Very Thin / Line	Option + 1
-Thin / Arrow	Option + 2
+Thin / Arrow		Option + 2
 Medium / Rectangle	Option + 3
-Thick / Ellipse	Option + 4
-Triangle	Option + 5
+Thick / Ellipse		Option + 4
+Triangle		Option + 5
 Toggle Fill Mode	Option + =
+```
 
-* Stroke Color
-
-Red			1
+### Stroke Color
+```
+Red		1
 Orange		2
 Yellow		3
 Green		4
@@ -54,3 +61,4 @@ Brown		9
 Dark Brown	0
 Black		-
 White		=
+```
