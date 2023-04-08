@@ -1,11 +1,10 @@
 # Markdown FAQ
 
-* Q Where can I find a good summary of markdown commands?
+## Q Where can I find a good summary of markdown commands?
 
-[cheat sheet](https://www.markdownguide.org/cheat-sheet)
+See: https://www.markdownguide.org/cheat-sheet
 
 ---
-
 ## Key commands
 
 # Heading 1
