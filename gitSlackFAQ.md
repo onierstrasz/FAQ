@@ -1,9 +1,14 @@
-# How to install a git post-receive hook for slack
+# Git + Slack FAQ
 
-- Login to yogi as a superuser
-- sudo su git
-- ~git/cmd/slackit.sh
-	- you will be prompted for the repo name and the webhook URL
+## Q How to install a git post-receive hook for slack?
+NB: These were the steps on the old server yogi. To be adapted for other setups.
+
+- Login to yogi as superuser
+```
+sudo su git
+~git/cmd/slackit.sh
+```
+- you will be prompted for the repo name and the webhook URL
 
 NB: the slackit.sh script is in the repo users-git-yogi-cmd
 
@@ -25,7 +30,7 @@ NB: this only works with public channels, not private ones!
 
 ---
 
-Q How to contribute to someone else's github project?
+## Q How to contribute to someone else's github project?
 
 See https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/#summary
 
