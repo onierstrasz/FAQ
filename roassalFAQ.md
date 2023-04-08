@@ -1,13 +1,20 @@
-# ROASSAL FAQ
+# Roassal FAQ
 
-* How does ROForceBasedLayout work?
-- How can I zoom to fit?
-  - You can't presently. Use a MiniMap.
-- How do I interactively update a Mondrian view? (add/remove elements)
-  - Don't. Use Roassal directly.
-* Why is there no ROView>>#+ shortcut for #add:?
-- How do you make the canvas (background) draggable?
-  - view @ RODraggable
+These notes date from a site visit to U Chile in 2013.
+
+## Q How does ROForceBasedLayout work?
+
+## Q How can I zoom to fit?
+You can't presently. Use a MiniMap.
+
+## Q How do I interactively update a Mondrian view? (add/remove elements)
+Don't. Use Roassal directly.
+
+## Q Why is there no `ROView>>#+` shortcut for `#add:`?
+
+
+## Q How do you make the canvas (background) draggable?
+View @ RODraggable
 
 # Bugs
 
@@ -55,22 +62,23 @@ This does not move the ball 2@3 2000 x -- it moves it 2@3 in 1/2000 increments!
 
 # How to run TestSurgeon
 
-* NB: Not working
+*NB:* Not working
 
 - install Spy from STH
-
+```
 MCHttpRepository
 	location: 'http://smalltalkhub.com/mc/ObjectProfile/Spy/main'
 	user: ''
 	password: ''
+```
 
 - load: SpyCore, Spy, ConfigurationOfSpy
 - then install Roassal (if needed)
 - install TestSurgeon
-
+```
 MCHttpRepository
 	location: 'http://smalltalkhub.com/mc/PabloEstefo/TestSurgeon/main'
 	user: ''
 	password: ''
-
+```
 - TSBrowser example
