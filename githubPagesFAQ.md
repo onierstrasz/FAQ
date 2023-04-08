@@ -38,7 +38,7 @@ Sidebar doc:
 https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
 https://github.com/mmistakes/minimal-mistakes/issues/1322
 
-# Steps
+### Steps
 - Fork the minimal mistakes repo
 - Create a `gh-pages branch`; make it the default branch
 - Protect the main branch
@@ -112,10 +112,9 @@ bundle exec jekyll serve
 
 and open http://localhost:4000
 
----
-
-# Open questions
-
 ## Q How can you include plain HTML files?
 
-Do you have to do something special with the themes?
+Apparently you can just include them at the top level, or in subfolders (but not within `_pages` etc, which are special folders).
+
+## Q How to get a sitemap?
+In the `docs/_pages` folder of the master branch you will find a `sitemap.md` and other resources.
