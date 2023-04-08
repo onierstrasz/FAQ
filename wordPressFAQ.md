@@ -1,4 +1,3 @@
----
 # WordPress FAQ
 
 ## Q How do I install WordPress?
@@ -101,5 +100,4 @@ Add the header code, eg:
 
 You have to create at least a couple of pages, and then you can set the home page to be a static page.
 
----
 
