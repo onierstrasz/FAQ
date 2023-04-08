@@ -1,6 +1,6 @@
 # Disk Utility FAQ
 
-Q What to do when you can't format a WD drive?
+## Q What to do when you can't format a WD drive?
 
 “MediaKit reports not enough space on device for requested operation”
 
@@ -23,4 +23,4 @@ Finally, partition it again:
 Where `XXX` is the new disk name.
 
 
-[Source](https://priyanksharma.com/tech/mediakit-reports-not-enough-space-on-device-for-requested-operation/)
+Source: https://priyanksharma.com/tech/mediakit-reports-not-enough-space-on-device-for-requested-operation/
