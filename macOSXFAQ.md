@@ -3,38 +3,41 @@
 ## Q What are the Mac Mail keyboard shortcuts?
 
 See: https://support.apple.com/en-gb/guide/mail/mlhlb94f262b/mac
-
-  CTRL-CMD-A -- archive mails
+```
+CTRL-CMD-A -- archive mails
+```
 
 ## Q How to make hidden files visible?
-	
-	CMD-SHIFT-.
+```
+CMD-SHIFT-.
+```
 
 ## Q How to delete empty directories containing folders but no files?
+```
+find . -type d -empty -print -delete
+```
 
-	find . -type d -empty -print -delete
-	
-	https://unix.stackexchange.com/questions/531618/find-empty-directoris-or-directories-with-no-files-in-them-recursively
+https://unix.stackexchange.com/questions/531618/find-empty-directoris-or-directories-with-no-files-in-them-recursively
 
 ## Q I get “Operation not permitted” errors after running ssh to login to my machine.
 
-Add sshd-keygen-wrapper to Security & Privacy -> Privacy -> Full Disk Access
+Add `sshd-keygen-wrapper` to `Security & Privacy > Privacy > Full Disk Access`
 
 https://superuser.com/questions/1615072/getting-an-operation-not-permitted-error-when-running-commands-after-to-sshing
 
 ## Q How to Restore from Time Machine?
 
-First do a clean install; then start the mac, and run Migration Assistant (in Applications>Utilities).
+First do a clean install; then start the mac, and run Migration Assistant (in `Applications>Utilities`).
 
 ## Q How to wipe a Mac (before giving it up)?
 
 - sign out of iTunes (pre-Catalina) or iCloud (post-Catalina)
-- go to System Preferences > Apple Id -- sign out, or turn off indivdiudal iCloud services
+- go to `System Preferences > Apple Id` -- sign out, or turn off individual iCloud services
 - sign out of Messages
 - disconnect any extraneous Bluetooth devices
-- Reset NVRAM (restart and hold <OPT><CMD>PR)
+- Reset NVRAM (restart and hold `<OPT><CMD>PR`)
 - Erase the HD and reinstall the OS
-- Restart and hold <CMD>R
+- Restart and hold `<CMD>R`
 - Erase the drive with Disk Utility (select Volume)
 - NB: you can also install the OS from a USB drive
 
@@ -44,7 +47,15 @@ https://support.apple.com/en-gb/HT208496
 
 ## Q How do I fix "Could not open a connection to your authentication agent"?
 
-Add "eval `ssh-agent`" to your login script (or "eval `ssh-agent -s`" in the case of bash or sh).
+Add 
+```
+eval `ssh-agent`
+```
+to your login script, or
+```
+eval `ssh-agent -s`
+```
+in the case of bash or sh.
 
 ## Q How to temporarily turn off notifications?
 
@@ -54,18 +65,18 @@ Option-click on the date in the menu bar.
 
 Can only change the individual lock screens, not the global login one!
 
-1. System Preferences > Users & Groups.
-2. Open lock to make changes.
-3. Right click on user in left column > Advanced Options.
-4. Copy UUID value.
-5. Go to /Library/Caches/Desktop Pictures.
-6. If it doesn’t exist create Desktop Pictures folder.
-7. Inside Desktop Pictures create folder with UUID value as name.
-8. Right-click on folder > Get Info.
-9. Open lock to make changes.
-10. Grant permission to Read & Write to user, admin, everyone.
-11. Change desktop wallpaper.
-12. Restart computer.
+- System Preferences > Users & Groups
+- Open lock to make changes
+- Right click on user in left column `> Advanced Options`
+- Copy UUID value
+- Go to `/Library/Caches/Desktop Pictures`
+- If it doesn’t exist create Desktop Pictures folder
+- Inside Desktop Pictures create folder with UUID value as name
+- Right-click on `folder > Get Info`
+- Open lock to make changes.
+- Grant permission to Read & Write to user, admin, everyone.
+- Change desktop wallpaper.
+- Restart computer.
 
 ## Q How to reinstall a given MacOS?
 
