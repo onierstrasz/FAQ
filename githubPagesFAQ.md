@@ -114,7 +114,7 @@ and open http://localhost:4000
 
 ## Q How can you include plain HTML files?
 
-Apparently you can just include them at the top level, or in subfolders (but not within `_pages` etc, which are special folders).
+Just include them at the top level, or in subfolders (but not within `_pages` etc, which are special folders).
 
 ## Q How to get a sitemap?
 In the [`docs/_pages`](https://github.com/mmistakes/minimal-mistakes/tree/master/docs/_pages) folder of the master branch you will find a [`sitemap.md`](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/sitemap.md) and other resources.
