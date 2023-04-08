@@ -3,8 +3,6 @@
 [Rascal](https://www.cwi.nl/en/results/software/rascal-one-stop-shop-for-metaprogramming/) is a meta-programming language.
 This FAQ dates from an extened site visit in Autumn 2013.
 
-## Q How do I find a class whose names matches a string in a list of URIs?
-
 ## Q Where is the m3 model defined?
 
 `analysis::m3::Core` and `lang::java::m3::Core in src/org/rascalmpl/library`
