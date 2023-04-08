@@ -262,47 +262,30 @@ Spin down hard disk:	CTRL SHIFT ALT 0
 Empty locked trash:	ALT empty trash
 ```
 
-FAQ
----
-Q How do I set the default page size to A4?
-A OPT click save page settings.
-
-Q The machine crashes when I try to print a file. What should I do?
-A Trash the desktop printer (and all its copies) and reinstall it with the chooser.
-
 ## Q How to make hidden directories visible?
-
+```
 chflags nohidden ~/Library
 
 defaults write com.apple.finder AppleShowAllFiles -boolean true
 killall Finder
- 
+```
+
 The reverse is
+```
 defaults delete com.apple.finder AppleShowAllFiles
 killall Finder
+```
 
-
-Q How do I change Leopard's ugly login splash screen?
+## Q How do I change Leopard's ugly login splash screen?
 A Replace /System/Library/CoreServices/DefaultDesktop.jpg
 
-Q How do I make Remote Desktop work through a firewall?
+## Q How do I make Remote Desktop work through a firewall?
 A Be sure to open ports 3283 and 5900. (RTFM)
 
-Q How to change scale factor for applications?
-A http://truckofnews.com/?p=22
+## Q How to change scale factor for applications?
+A See http://truckofnews.com/?p=22
 Examples:
+```
 defaults write NSGlobalDomain AppleDisplayScaleFactor 1.5
 defaults write com.apple.iTunes AppleDisplayScaleFactor .75
-
-
-Useful commands:
-man -t -- troff man page
-groff -Thtml -- generate html
-MvMac CpMac -- move and copy mac files, preserving metadata and resource forks
-locate -- find files
-xargs -- execute utility
-nidump -- extract netinfo data
-<cmd>S on startup -- boot single user
-fink
-mySQL
-
+```
