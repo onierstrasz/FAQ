@@ -82,137 +82,151 @@ Can only change the individual lock screens, not the global login one!
 
 Download the installer and create a bootable drive.
 Download the installer the usual way, but don't install it. Then run:
-
-	sudo /Applications/Install\ macOS.../Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
-
-Substituting ... for the right MacOS installer, and MyVolume for the USB drive
+```
+sudo /Applications/Install\ macOS.../Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
+```
+Replacing ... by the right MacOS installer, and MyVolume by the USB drive
 For example:
+```
+sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia \
+  --volume /Volumes/InstallVentura
+```
+Detailed instructions here: https://support.apple.com/en-us/HT201372
 
-    sudo /Applications/Install\ macOS\ Ventura.app/Contents/Resources/createinstallmedia \
-      --volume /Volumes/InstallVentura
-
-Detailed instructions here:
-
-	https://support.apple.com/en-us/HT201372
-
-Boot the mac to update with the drive connected, and hold OPT (power button on M1 machines) till you see the selection of drives to boot from.
+Boot the mac to update with the drive connected, and hold `OPT` (power button on M1 machines) till you see the selection of drives to boot from.
 
 ## Q Why can't I boot from USB?
 
 https://www.uubyte.com/boot-mac-from-usb.html
 
-In certain cases where your Mac has the Apple T2 Security Chip (2018 and later devices), it may be your Startup Security Utility settings that are preventing you from booting from USB. In this situation, restart your Mac and hold down the Command + R keys when you see the Apple logo. This will put your Mac into Recovery mode. In macOS Utilities, go to Utilities > Startup Security Utility and sign in as admin. Under External Boot, select the second option - Allow Booting from External Media.
+In certain cases where your Mac has the Apple T2 Security Chip (2018 and later devices), it may be your Startup Security Utility settings that are preventing you from booting from USB. In this situation, restart your Mac and hold down the Command + R keys when you see the Apple logo. This will put your Mac into Recovery mode. In macOS Utilities, go to `Utilities > Startup Security Utility` and sign in as admin. Under External Boot, select the second option: `Allow Booting from External Media`.
 
 ## Q How do I get rid of drop shadows when taking screen shots of windows?
 
-- Hold down the <OPT> key
-	
-	https://www.macworld.com/article/3527415/how-to-get-rid-of-the-screenshot-drop-shadow-in-macos.html
+Hold down the `<OPT>` key
+
+https://www.macworld.com/article/3527415/how-to-get-rid-of-the-screenshot-drop-shadow-in-macos.html
 
 ## Q How to create a Windows compatible Disk Image?
 
 - https://www.makeuseof.com/tag/how-to-create-windows-compatible-iso-disc-images-in-mac-os-x/
 - Create a DVD/CD disk master
 - Convert to iso image:
-- hdiutil makehybrid -iso -joliet -o [filename].iso [filename].cdr
-
-
+- `hdiutil makehybrid -iso -joliet -o [filename].iso [filename].cdr`
 
 ## Q Why does Disk Utility fail to copy a CD with “operation canceled”?
 
-- System Preferences -> Security & Privacy -> Privacy tab -> Full Disk Access (add Disk Utility)
+`System Preferences > Security & Privacy > Privacy tab > Full Disk Access (add Disk Utility)`
 
-- https://discussions.apple.com/thread/250912433
+https://discussions.apple.com/thread/250912433
 
 ## Q How to properly use wget?
 
-- https://handyman.dulare.com/advanced-wget-website-mirroring/
+https://handyman.dulare.com/advanced-wget-website-mirroring/
 
 Basic version:
-
-	wget --mirror --convert-links --adjust-extension --page-requisites  http://www.mywebsite.com/
+```
+wget --mirror --convert-links --adjust-extension --page-requisites  http://www.mywebsite.com/
+```
 
 Advanced:
-
-	wget --mirror --convert-links --adjust-extension --page-requisites --span-hosts -U Mozilla -e robots=off --no-cookies -D www.mywebsite.com,files.mywebsite.com,images.somewhere.com http://www.mywebsite.com/
-
+```
+wget --mirror --convert-links --adjust-extension \
+  --page-requisites --span-hosts -U Mozilla -e robots=off --no-cookies -D \
+  www.mywebsite.com,files.mywebsite.com,images.somewhere.com http://www.mywebsite.com/
+```
 
 ## Q How to stop Catalina from re-verifying apps?
 
-- https://appletoolbox.com/why-is-macos-catalina-verifying-applications-before-i-can-open-them/
-- defaults write com.apple.LaunchServices LSQuarantine -bool NO
+https://appletoolbox.com/why-is-macos-catalina-verifying-applications-before-i-can-open-them/
+
+```
+defaults write com.apple.LaunchServices LSQuarantine -bool NO
+```
 
 ## Q How to take a screen video?
 
-Use QuickTime: File > New Screen Recording
+Use QuickTime: `File > New Screen Recording`
 
 ## Q How to hide/unhide desktop icons?
 
 https://www.maketecheasier.com/hide-desktop-icons-mac/
 
-	defaults write com.apple.finder CreateDesktop false
-	killall Finder
-
-	defaults write com.apple.finder CreateDesktop true
-	killall Finder
+```
+defaults write com.apple.finder CreateDesktop false
+killall Finder
+```
+or
+```
+defaults write com.apple.finder CreateDesktop true
+killall Finder
+```
 
 ## Q How do I create symbolic root-level directory?
 
 https://derflounder.wordpress.com/2020/01/18/creating-root-level-directories-and-symbolic-links-on-macos-catalina/
 
+```
 sudo su root
 cd /etc
 touch synthetic.conf
 chmod 0644 synthetic.conf 
 echo "home	Users/oscar/home" >> synthetic.conf 
-
- # NB: a TAB must separate "home" from the directory
-
+# NB: a TAB must separate "home" from the directory
 shutdown -r now
-
+```
 
 ## Q How to find my ip address?
 
-- ipconfig getifaddr en1
-- or you are on wifi, en0
+```
+ipconfig getifaddr en1
+```
+or if you are on wifi, `en0`
 
 
 ## Q How to bulk delete iphone photos?
-- Use the Image Capture app on the mac. (Select all and click the delete icon)
+Use the Image Capture app on the mac. (Select all and click the delete icon)
 
 ## Q How to get audio out through HDMI?
-- If the Sound Preferences don't work, try the VLC audio out control
-- Ditto to force audio out through the headphone jack
+If the Sound Preferences don't work, try the VLC audio out control.
+Ditto to force audio out through the headphone jack.
 
-## Q How to change default finder column width?
-- Hover over the column separator, and hold the OPT key while adjusting it
+## Q How to change the default finder column width?
+Hover over the column separator, and hold the `OPT` key while adjusting it
 
 ## Q How to make hidden files visible/hidden:
-- Keyboard shortcut: CMD SHIFT .
-- As default: defaults write com.apple.finder AppleShowAllFiles true|false
+
+Keyboard shortcut: `CMD SHIFT .`
+
+As default: `defaults write com.apple.finder AppleShowAllFiles true|false`
 
 ## Q How to force Safari to save an autopassword?
-- edit the Keychain entry; or create an arbitrary Keychain entry and edit it to match the one you want
+Edit the Keychain entry; or create an arbitrary Keychain entry and edit it to match the one you want.
 
 ## Q How to Reduce/mute startup chime?
 
 Reduce/mute:
-
+```
 sudo nvram SystemAudioVolume="%20"
 sudo nvram SystemAudioVolume="%00"
-
+```
 Reset to default:
+```
 sudo nvram -d SystemAudioVolume
+```
 
 ## Q How to save an app store installer?
 
 After downloading but before installer, find the installer in the Applications folder and save it.
 
 ## Q How to ignore updates?
-- sudo /usr/sbin/softwareupdate --ignore "macOS Catalina" 
-- sudo /usr/sbin/softwareupdate --reset-ignored	
-
----
+```
+sudo /usr/sbin/softwareupdate --ignore "macOS Catalina" 
+```
+Cancel:
+```
+sudo /usr/sbin/softwareupdate --reset-ignored	
+```
 
 ## Q Why are my fonts missing?
 
@@ -222,33 +236,31 @@ I've been configuring my new Macbook, and found that for some reason there were 
 
 After some digging I realized the missing fonts were standard MS Office fonts, which in the past were automatically installed in the Mac font database.  But my new laptop came with Office 2016 installed, and apparently Office 2016 just stores its fonts inside the app and does not automatically install them in the central font repository for use by other Mac apps.
 
-The solution is simple: Make a subdirectory Microsoft in ~/Library/Fonts, and copy all the files in /Applications/Microsoft Word.app/Contents/Resources/DFonts over there.
-
-
----
+The solution is simple: Make a subdirectory Microsoft in `~/Library/Fonts`, and copy all the files in `/Applications/Microsoft Word.app/Contents/Resources/DFonts` over there.
 
 ## Q What to do if bluetooth becomes unavailable?
 
 First try to reset the PRAM.
 Alternatively: Shut down your Mac, disconnect all USB devices for two minutes, start up, and re-connect your USB devices once again.
+
 http://www.igeeksblog.com/fix-bluetooth-not-available-error-mac/
 
 ## Q How to reset PRAM
 
-Reboot while holding <CMD><OPT>PR
+Reboot while holding `<CMD><OPT>PR`
 
----
 
-Mac Shortcuts
--------------
-Sleep: ALT CMD EJECT
+## What are the main Mac shortcuts?
 
-Shutdown: SHIFT ALT CMD BOOT
-Extensions off: SHIFT during reboot
-Rebuild Desktop File: ALT CMD during reboot
-Screen snapshot: SHIFT CMD 3
-Spin down hard disk: CTRL SHIFT ALT 0
-Empty locked trash: ALT empty trash
+```
+Sleep:			ALT CMD EJECT
+Shutdown:		SHIFT ALT CMD BOOT
+Extensions off:		SHIFT during reboot
+Rebuild Desktop File:	ALT CMD during reboot
+Screen snapshot:	SHIFT CMD 3
+Spin down hard disk:	CTRL SHIFT ALT 0
+Empty locked trash:	ALT empty trash
+```
 
 FAQ
 ---
