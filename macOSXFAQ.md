@@ -1,32 +1,32 @@
 # Mac OSX FAQ
 
-* What are the Mac Mail keyboard shortcuts?
+## Q What are the Mac Mail keyboard shortcuts?
 
 See: https://support.apple.com/en-gb/guide/mail/mlhlb94f262b/mac
 
   CTRL-CMD-A -- archive mails
 
-* How to make hidden files visible?
+## Q How to make hidden files visible?
 	
 	CMD-SHIFT-.
 
-* How to delete empty directories containing folders but no files?
+## Q How to delete empty directories containing folders but no files?
 
 	find . -type d -empty -print -delete
 	
 	https://unix.stackexchange.com/questions/531618/find-empty-directoris-or-directories-with-no-files-in-them-recursively
 
-* I get “Operation not permitted” errors after running ssh to login to my machine.
+## Q I get “Operation not permitted” errors after running ssh to login to my machine.
 
 Add sshd-keygen-wrapper to Security & Privacy -> Privacy -> Full Disk Access
 
 https://superuser.com/questions/1615072/getting-an-operation-not-permitted-error-when-running-commands-after-to-sshing
 
-* How to Restore from Time Machine?
+## Q How to Restore from Time Machine?
 
 First do a clean install; then start the mac, and run Migration Assistant (in Applications>Utilities).
 
-* How to wipe a Mac (before giving it up)?
+## Q How to wipe a Mac (before giving it up)?
 
 - sign out of iTunes (pre-Catalina) or iCloud (post-Catalina)
 - go to System Preferences > Apple Id -- sign out, or turn off indivdiudal iCloud services
@@ -42,15 +42,15 @@ https://support.apple.com/en-us/HT201065
 
 https://support.apple.com/en-gb/HT208496
 
-* How do I fix "Could not open a connection to your authentication agent"?
+## Q How do I fix "Could not open a connection to your authentication agent"?
 
 Add "eval `ssh-agent`" to your login script (or "eval `ssh-agent -s`" in the case of bash or sh).
 
-* How to temporarily turn off notifications?
+## Q How to temporarily turn off notifications?
 
 Option-click on the date in the menu bar.
 
-* How to change the Big Sur login screen?
+## Q How to change the Big Sur login screen?
 
 Can only change the individual lock screens, not the global login one!
 
@@ -67,7 +67,7 @@ Can only change the individual lock screens, not the global login one!
 11. Change desktop wallpaper.
 12. Restart computer.
 
-* How to reinstall a given MacOS?
+## Q How to reinstall a given MacOS?
 
 Download the installer and create a bootable drive.
 Download the installer the usual way, but don't install it. Then run:
@@ -86,19 +86,19 @@ Detailed instructions here:
 
 Boot the mac to update with the drive connected, and hold OPT (power button on M1 machines) till you see the selection of drives to boot from.
 
-* Why can't I boot from USB?
+## Q Why can't I boot from USB?
 
 https://www.uubyte.com/boot-mac-from-usb.html
 
 In certain cases where your Mac has the Apple T2 Security Chip (2018 and later devices), it may be your Startup Security Utility settings that are preventing you from booting from USB. In this situation, restart your Mac and hold down the Command + R keys when you see the Apple logo. This will put your Mac into Recovery mode. In macOS Utilities, go to Utilities > Startup Security Utility and sign in as admin. Under External Boot, select the second option - Allow Booting from External Media.
 
-* How do I get rid of drop shadows when taking screen shots of windows?
+## Q How do I get rid of drop shadows when taking screen shots of windows?
 
 - Hold down the <OPT> key
 	
 	https://www.macworld.com/article/3527415/how-to-get-rid-of-the-screenshot-drop-shadow-in-macos.html
 
-* How to create a Windows compatible Disk Image?
+## Q How to create a Windows compatible Disk Image?
 
 - https://www.makeuseof.com/tag/how-to-create-windows-compatible-iso-disc-images-in-mac-os-x/
 - Create a DVD/CD disk master
@@ -107,13 +107,13 @@ In certain cases where your Mac has the Apple T2 Security Chip (2018 and later d
 
 
 
-* Why does Disk Utility fail to copy a CD with “operation canceled”?
+## Q Why does Disk Utility fail to copy a CD with “operation canceled”?
 
 - System Preferences -> Security & Privacy -> Privacy tab -> Full Disk Access (add Disk Utility)
 
 - https://discussions.apple.com/thread/250912433
 
-* How to properly use wget?
+## Q How to properly use wget?
 
 - https://handyman.dulare.com/advanced-wget-website-mirroring/
 
@@ -126,16 +126,16 @@ Advanced:
 	wget --mirror --convert-links --adjust-extension --page-requisites --span-hosts -U Mozilla -e robots=off --no-cookies -D www.mywebsite.com,files.mywebsite.com,images.somewhere.com http://www.mywebsite.com/
 
 
-* How to stop Catalina from re-verifying apps?
+## Q How to stop Catalina from re-verifying apps?
 
 - https://appletoolbox.com/why-is-macos-catalina-verifying-applications-before-i-can-open-them/
 - defaults write com.apple.LaunchServices LSQuarantine -bool NO
 
-* How to take a screen video?
+## Q How to take a screen video?
 
 Use QuickTime: File > New Screen Recording
 
-* How to hide/unhide desktop icons?
+## Q How to hide/unhide desktop icons?
 
 https://www.maketecheasier.com/hide-desktop-icons-mac/
 
@@ -145,7 +145,7 @@ https://www.maketecheasier.com/hide-desktop-icons-mac/
 	defaults write com.apple.finder CreateDesktop true
 	killall Finder
 
-* How do I create symbolic root-level directory?
+## Q How do I create symbolic root-level directory?
 
 https://derflounder.wordpress.com/2020/01/18/creating-root-level-directories-and-symbolic-links-on-macos-catalina/
 
@@ -160,30 +160,30 @@ echo "home	Users/oscar/home" >> synthetic.conf
 shutdown -r now
 
 
-* How to find my ip address?
+## Q How to find my ip address?
 
 - ipconfig getifaddr en1
 - or you are on wifi, en0
 
 
-* How to bulk delete iphone photos?
+## Q How to bulk delete iphone photos?
 - Use the Image Capture app on the mac. (Select all and click the delete icon)
 
-* How to get audio out through HDMI?
+## Q How to get audio out through HDMI?
 - If the Sound Preferences don't work, try the VLC audio out control
 - Ditto to force audio out through the headphone jack
 
-* How to change default finder column width?
+## Q How to change default finder column width?
 - Hover over the column separator, and hold the OPT key while adjusting it
 
-* How to make hidden files visible/hidden:
+## Q How to make hidden files visible/hidden:
 - Keyboard shortcut: CMD SHIFT .
 - As default: defaults write com.apple.finder AppleShowAllFiles true|false
 
-* How to force Safari to save an autopassword?
+## Q How to force Safari to save an autopassword?
 - edit the Keychain entry; or create an arbitrary Keychain entry and edit it to match the one you want
 
-* How to Reduce/mute startup chime?
+## Q How to Reduce/mute startup chime?
 
 Reduce/mute:
 
@@ -193,18 +193,18 @@ sudo nvram SystemAudioVolume="%00"
 Reset to default:
 sudo nvram -d SystemAudioVolume
 
-* How to save an app store installer?
+## Q How to save an app store installer?
 
 After downloading but before installer, find the installer in the Applications folder and save it.
 
-* How to ignore updates?
+## Q How to ignore updates?
 - sudo /usr/sbin/softwareupdate --ignore "macOS Catalina" 
 - sudo /usr/sbin/softwareupdate --reset-ignored	
 [Tweet from James Grenning (‪@jwgrenning‬) 25.10.19, 15:39]
 
 ---
 
-* Why are my fonts missing?
+## Q Why are my fonts missing?
 
 Note to Mac users: Here's an odd problem with fonts that I just solved, but it took me 30 minutes or so.  Maybe you might find it helpful.
 
@@ -217,13 +217,13 @@ The solution is simple: Make a subdirectory Microsoft in ~/Library/Fonts, and co
 
 ---
 
-* What to do if bluetooth becomes unavailable?
+## Q What to do if bluetooth becomes unavailable?
 
 First try to reset the PRAM.
 Alternatively: Shut down your Mac, disconnect all USB devices for two minutes, start up, and re-connect your USB devices once again.
 http://www.igeeksblog.com/fix-bluetooth-not-available-error-mac/
 
-* How to reset PRAM
+## Q How to reset PRAM
 
 Reboot while holding <CMD><OPT>PR
 
@@ -248,7 +248,7 @@ A OPT click save page settings.
 Q The machine crashes when I try to print a file. What should I do?
 A Trash the desktop printer (and all its copies) and reinstall it with the chooser.
 
-* Q How to make hidden directories visible?
+## Q How to make hidden directories visible?
 
 chflags nohidden ~/Library
 
@@ -284,95 +284,3 @@ nidump -- extract netinfo data
 fink
 mySQL
 
----
-# What to install?
-
-MachuPicchu Install log
-
-2021-04-16 - 18
-
-http://internetbox.home/#power
-
-* To Install:
-Xcode tools (try to run “make”)
-1Password (had to download and try 3 x)
-Textmate
-Atom
-Cd to
-GraphicConverter
-MacTex
-Plex, Plex Media Server
-Dropbox
-Zoom
-Signal
-FortiClient
-MS Office
-DeepL
-Haskell
-IntelliJ
-Java JDK 16
-Discord
-Ink2Go
-SourceTree
-VLC
-Canon-mac-ts8100
-Transmission
-Transmit
-Eclipse
-ScanSnap
-TeamViewer
-WD Discovery (WD utility)
-Firefox
-Chrome
-MigrosBank
-Google Earth
-Camtasia
-Sonos Desktop
-Skype
-TorBrowser
-Ffmpeg
-Elgato-Key-Light
-Logitech Brio Capture
-Spotify
-
-* Install from App Store
-Trello
-Slack
-MS Todo
-Messenger
-Clockify
-iThoughtsX
-WhatsApp Desktop
-RocketChat
-Numbers
-Keynote
-Pages
-
-* To configure:
-Dock
-Terminal profile; chsh
-Finder
-RESTORE Documents and INSTALLERS from RSYNC
-ssh; make links
-Desktop background
-Hot corners
-Mouse options
-Mail
-Sharing (machine name, remote access etc)
-Dropbox local syncs
-RESTORE remaining Folders from RSYNC
-RESTORE margy etc
-sync movies
-Check Photos
-BACKUP Oscar to 28TB
-
-* Turn on energy saver and require pwd after 5 minutes
-* Install Xcode
-* Install brew
-Download and run:
-https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-
-brew install gnu-tar
-(Needed for backups)
-
----
