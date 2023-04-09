@@ -112,10 +112,27 @@ bundle exec jekyll serve
 
 and open http://localhost:4000
 
----
+## Q How to deploy a GH Pages repo to a different subdomain?
 
-# Open questions
+TO BE TESTED ...
+
+Suppose you have a custom user domain `mydomain.org`.
+If you deploy a project `xyz`, it will be mapped to `mydomain.org/xyz`.
+If instead you want it to go to `xyz.mydomain.org`, then you must:
+(1) Enable GH pages for the repo
+(2) Specify the custom domain `example.com` (best if it starts with `www`)
+(3) Create 4 `A` records for `185.199.[108-111].153` 
+(4) and 1 `CNAME` record for `username.github.io`
+(5) Confirm the `A` records by running `dig +noall +answer example.com` (returns the IP addresses) and confirm the `CNAME` record with `dig www.example.com +nostats +nocomments +nocmd` (returns `CNAME username.github.io`)
+(6) Check the `Enforce HTTPS` option.
+
+https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages
 
 ## Q How can you include plain HTML files?
 
-Do you have to do something special with the themes?
+Just add them as top-level files or folders (i.e., not within `_pages` or other special folders).
+
+
+---
+
+# Open questions
