@@ -20,6 +20,7 @@ http://www.xavierdupre.fr/blog/2017-08-24_nojs.html
 
 When you fork a project, by default it seems you cannot create issues for your fork.
 Enable this under `Settings > General > Features > Issues`.
+Sometimes (like with the minimalmistakes repo) there is is a fixed set of issue templates. You can delete the template directory to allow posting any kind of issues.
 
 ## Q How to contribute a pull request to someone else's github project?
 
