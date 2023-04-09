@@ -38,7 +38,7 @@ Sidebar doc:
 https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
 https://github.com/mmistakes/minimal-mistakes/issues/1322
 
-# Steps
+### Steps
 - Fork the minimal mistakes repo
 - Create a `gh-pages branch`; make it the default branch
 - Protect the main branch
@@ -112,6 +112,7 @@ bundle exec jekyll serve
 
 and open http://localhost:4000
 
+<<<<<<< HEAD
 ## Q How to deploy a GH Pages repo to a different subdomain?
 
 TO BE TESTED ...
@@ -128,6 +129,9 @@ If instead you want it to go to `xyz.mydomain.org`, then you must:
 
 https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages
 
+## Q How to get a sitemap?
+In the [`docs/_pages`](https://github.com/mmistakes/minimal-mistakes/tree/master/docs/_pages) folder of the master branch you will find a [`sitemap.md`](https://github.com/mmistakes/minimal-mistakes/blob/master/docs/_pages/sitemap.md) and other resources.
+
 ## Q How can you include plain HTML files?
 
 Just add them as top-level files or folders (i.e., not within `_pages` or other special folders).
@@ -136,3 +140,4 @@ Just add them as top-level files or folders (i.e., not within `_pages` or other 
 ---
 
 # Open questions
+
