@@ -16,6 +16,11 @@ You could clean everything and commit to the current state.
 
 http://www.xavierdupre.fr/blog/2017-08-24_nojs.html
 
+## Q How to enable issues for a forked project?
+
+When you fork a project, by default it seems you cannot create issues for your fork.
+Enable this under `Settings > General > Features > Issues`.
+
 ## Q How to contribute a pull request to someone else's github project?
 
 See https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/#summary
