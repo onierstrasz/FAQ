@@ -92,6 +92,28 @@ article.page {
 }
 ```
 
+## Q How to configure a custom sidebar?
+
+You can add the following either to the front matter of a single page, or to the defaults for `pages` in `_config.yml` under `values:`
+
+```
+sidebar:
+  - title: "Nierstrasz Family website"
+    image: /assets/images/crest-small.jpg
+    text: "some sample text"
+  - title: "another title"
+    text: "more text"
+```
+
+https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
+
+Examples
+
+https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/
+
+https://mmistakes.github.io/minimal-mistakes/layout-sidebar-nav-list/
+
+
 ## Q How to use liquid templates? (used by Jekyll)
 
 Learn about the Liquid templating system
