@@ -1,5 +1,8 @@
 # GitHub Pages FAQ
 
+## To do
+Provide some structure to this FAQ ...
+
 ## Q How to set up a GitHub Pages repo?
 
 Any repo can be a GH pages site. You can have just one user site which must be defined in a repo called `username.github.io`, but any other repo can be a GHP site as well. 
@@ -147,17 +150,18 @@ and open http://localhost:4000
 
 ## Q How to deploy a GH Pages repo to a different subdomain?
 
-TO BE TESTED ...
+Did this for www.test.nierstrasz.org and www.family.nierstrasz.org
 
 Suppose you have a custom user domain `mydomain.org`.
 If you deploy a project `xyz`, it will be mapped to `mydomain.org/xyz`.
 If instead you want it to go to `xyz.mydomain.org`, then you must:
-(1) Enable GH pages for the repo
-(2) Specify the custom domain `example.com` (best if it starts with `www`)
-(3) Create 4 `A` records for `185.199.[108-111].153` 
-(4) and 1 `CNAME` record for `username.github.io`
-(5) Confirm the `A` records by running `dig +noall +answer example.com` (returns the IP addresses) and confirm the `CNAME` record with `dig www.example.com +nostats +nocomments +nocmd` (returns `CNAME username.github.io`)
-(6) Check the `Enforce HTTPS` option.
+
+1. Enable GH pages for the repo
+2. Specify the custom domain `example.com` (best if it starts with `www`)
+3. Create 4 `A` records for `185.199.[108-111].153` 
+4. and 1 `CNAME` record for `username.github.io`
+5. Confirm the `A` records by running `dig +noall +answer example.com` (returns the IP addresses) and confirm the `CNAME` record with `dig www.example.com +nostats +nocomments +nocmd` (returns `CNAME username.github.io`)
+6. Check the `Enforce HTTPS` option.
 
 https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages
 
@@ -168,6 +172,13 @@ In the [`docs/_pages`](https://github.com/mmistakes/minimal-mistakes/tree/master
 
 Just add them as top-level files or folders (i.e., not within `_pages` or other special folders).
 
+## Q How to set up a photo gallery?
+
+The easiest way is just to put images inside markdown tables.
+If you just want a row of images with captions, a trick is to put the images in the header.
+Make the images clickable and point to a page with the full image.
+
+NB: The columns are adjusted to the width of the text, so make those equal.
 
 ---
 
