@@ -80,6 +80,16 @@ redirect_from:
 
 You can also configure default values for pages (like posts) in the `_config.yml`
 
+## Q How to get rid of the underlines on the URLs?
+
+Add this to `_sass/minimal-mistakes/_page.scss`
+
+```
+body {
+	a { text-decoration: none !important; }
+}
+```
+
 ## Q How to disable the Sidebar?
 In `_config.yml` set `author_profile: false`
 Also set all author attributes to nil (not empty strings).
@@ -93,15 +103,27 @@ article.page {
 }
 ```
 
-## Q How to get rid of the underlines on the URLs?
+## Q How to configure a custom sidebar?
 
-Add this to `_sass/minimal-mistakes/_page.scss`
+You can add the following either to the front matter of a single page, or to the defaults for `pages` in `_config.yml` under `values:`
 
 ```
-body {
-	a { text-decoration: none !important; }
-}
+sidebar:
+  - title: "Nierstrasz Family website"
+    image: /assets/images/crest-small.jpg
+    text: "some sample text"
+  - title: "another title"
+    text: "more text"
 ```
+
+https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
+
+Examples
+
+https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/
+
+https://mmistakes.github.io/minimal-mistakes/layout-sidebar-nav-list/
+
 
 ## Q How to use liquid templates? (used by Jekyll)
 
