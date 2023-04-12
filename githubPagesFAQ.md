@@ -180,6 +180,19 @@ Make the images clickable and point to a page with the full image.
 
 NB: The columns are adjusted to the width of the text, so make those equal.
 
+## Q How to get an edit button?
+
+Add the link to the footer.html with a pencil icon.
+Possibly add some CSS to put it at the right.
+To get the file path, access `{{page.path}}`
+(at least according to the [jekyll docs](https://jekyllrb.com/docs/variables/)).
+
+```
+<a href="https://github.com/onierstrasz/onierstrasz.github.io/edit/gh-pages/{{ page.path }}"><image src="/images/pencil-grey-bg.png" alt="edit" width="20" length="20"></a>
+```
+
+*NB:* If the layout has `{% include_cached footer.html %}` then you must change it to `{% include footer.html %}` or else the `page` variable will not be correct!
+
 ---
 
 # Open questions
