@@ -138,7 +138,7 @@ Did not succeed to select a particular track. All the advice pages seem to give 
 
 Alternatively use Handbrake!
 
-## Q ffmpeg chopkes on a .m4v file. How do I process it?
+## Q ffmpeg chokes on an .m4v file. How do I process it?
 
 Just change the suffix to `.mp4`
 

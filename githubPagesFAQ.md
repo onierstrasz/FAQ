@@ -57,6 +57,7 @@ https://mmistakes.github.io/minimal-mistakes/docs/pages/
 
 Add a `_pages` folder.
 Add a `permalink` in the yaml front matter of each file.
+Remove the default root `index.html`.
 
 ## Q Which variables should be defined in the YAML front matter of a page?
 
@@ -92,6 +93,16 @@ article.page {
 }
 ```
 
+## Q How to get rid of the underlines on the URLs?
+
+Add this to `_sass/minimal-mistakes/_page.scss`
+
+```
+body {
+	a { text-decoration: none !important; }
+}
+```
+
 ## Q How to use liquid templates? (used by Jekyll)
 
 Learn about the Liquid templating system
@@ -112,7 +123,6 @@ bundle exec jekyll serve
 
 and open http://localhost:4000
 
-<<<<<<< HEAD
 ## Q How to deploy a GH Pages repo to a different subdomain?
 
 TO BE TESTED ...
