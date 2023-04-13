@@ -6,51 +6,60 @@
 
 # Q How to enable user Sites on Mac?
 
-https://iraspa.org/blog/setting-up-apache-user-sites-folders-on-macos/
+For Ventura
+
+https://discussions.apple.com/docs/DOC-250006086
+
+You should be able to open [localhost](http://localhost) or [127.0.0.1](http://127.0.0.1) and see **It works!**.
+
+This is defined in `/Library/WebServer/Documents/index.html.en` and is defined as `DocumentRoot` in `/etc/apache2/httpd.conf`.
+
+Next, create a `~Sites` folder in your home directory and create an `index.html` there.
+
+Edit `/etc/apache2/users/xxx.conf` where `xxx` is your username.
+
+Add it, or change it to:
+```
+<Directory "/Users/xxx/Sites/">
+	AllowOverride All
+	Options Indexes MultiViews FollowSymLinks
+	Require all granted
+</Directory>
+```
+
+Make a backup of `httpd.conf` and the `extra` folder in `orig` or `backup`.
+
+Edit `/etc/apache2/extra/httpd-userdir.conf` and uncomment line 16
+```
+Include /private/etc/apache2/users/*.conf
+```
 
 
-Edit 
-	/etc/apache2/httpd.conf
-and uncomment these lines:
+Edit `/etc/apache2/httpd.conf` and uncomment these lines:
+```
+LoadModule cgi_module libexec/apache2/mod_cgi.so 			# 174
+LoadModule userdir_module libexec/apache2/mod_userdir.so	# 184
+Include /private/etc/apache2/extra/httpd-userdir.conf		# 521
+```
 
-	LoadModule authz_host_module libexec/apache2/mod_authz_host.so
-	LoadModule authz_core_module libexec/apache2/mod_authz_core.so
-	LoadModule include_module libexec/apache2/mod_include.so
-	LoadModule vhost_alias_module libexec/apache2/mod_vhost_alias.so
-	LoadModule userdir_module libexec/apache2/mod_userdir.so
-	LoadModule rewrite_module libexec/apache2/mod_rewrite.so
-	Include /private/etc/apache2/extra/httpd-userdir.conf
-	Include /private/etc/apache2/extra/httpd-vhosts.conf
+NB: PHP Is deprecated and was removed from macOS 12
 
-Edit 
-	/etc/apache2/extra/httpd-userdir.conf
-and uncomment:
+Run the following command to give the Apache web server access to the Sites folder in your home directory.
+```
+chmod +a "_www allow execute" ~
+```
 
-	Include /private/etc/apache2/users/*.conf
+Test the apache configuration:
+```
+apachectl configtest
+```
 
-Add users/*.conf files if missing. Edit them to look like this:
+Then run:
+```
+sudo apachectl restart
+```
 
-/etc/apache2/users/oscar.conf
-
-	<Directory "/Users/oscar/Sites/">
-		AllowOverride All
-		Options Indexes MultiViews FollowSymLinks
-		Require all granted
-	</Directory>
-
-
-Then run 
-
-	sudo apachectl restart
-
-In a pinch you can also try to modify the lines:
-
-    <IfModule unixd_module>
-    User _www
-    Group _www
-    </IfModule>
-
-to the actual user and group.
+Now you should be able to access `localhost/~xxx`.
 
 ## Q How to override DNS lookups?
 
