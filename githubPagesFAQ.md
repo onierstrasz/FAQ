@@ -193,7 +193,59 @@ To get the file path, access `{{page.path}}`
 
 *NB:* If the layout has `{% include_cached footer.html %}` then you must change it to `{% include footer.html %}` or else the `page` variable will not be correct!
 
----
+## Q How to test a Jekyll site on localhost?
 
-# Open questions
+https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll
+
+First install Ruby, then Jekyll on a mac.
+
+```
+brew install chruby ruby-install xz
+ruby-install ruby 3.1.3
+```
+
+Run this script from the project folder to serve the website from `http://localhost:4000`
+
+```
+#! /bin/bash
+# Run this script from the project folder
+
+cd `dirname "$0"`
+
+# load ruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.3
+
+# install jekyll
+gem install jekyll
+
+# create Gemfile
+cat > Gemfile <<'eof'
+source 'https://rubygems.org'
+gem 'nokogiri'
+gem 'rack', '~> 2.2.4'
+gem 'rspec'
+gem 'jekyll'
+gem 'jekyll-paginate'
+gem 'jekyll-sitemap'
+gem 'jekyll-gist'
+gem 'jekyll-feed'
+gem 'jekyll-include-cache'
+eof
+
+bundle install
+# git add Gemfile Gemfile.lock
+
+# start the server
+bundle exec jekyll serve
+
+# Or tracing mode
+# bundle exec jekyll serve --trace
+
+# You can now open http://localhost:4000
+```
+
+NB: If you get errors, you may have to install more gems in the script.
+NB: You shouldn't push changes to the Gemfile to the repo. It's a good idea to make a backup and restore it.
 
