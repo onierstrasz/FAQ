@@ -42,6 +42,7 @@ https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
 https://github.com/mmistakes/minimal-mistakes/issues/1322
 
 ### Steps
+
 - Fork the minimal mistakes repo
 - Create a `gh-pages branch`; make it the default branch
 - Protect the main branch
@@ -192,6 +193,40 @@ To get the file path, access `{{page.path}}`
 ```
 
 *NB:* If the layout has `{% include_cached footer.html %}` then you must change it to `{% include footer.html %}` or else the `page` variable will not be correct!
+
+## Q How to add Google Analytics?
+
+Create an account on https://analytics.google.com/
+
+Note the tracking tag to be added manually.
+
+Add this to the config.yml
+
+```
+analytics:
+  provider: "custom"
+  google:
+    tracking_id: "G-7EH2V961E8" # Replace by the actual tag
+    anonymize_ip: false # default
+```
+
+Add the gtag snippet to `_includes/analytics-providers/custom.html`.
+Copy-paste from the analytics site with the correct tag.
+
+```
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7EH2V961E8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7EH2V961E8');
+</script>
+```
+
+
+---
 
 ## Q How to test a Jekyll site on localhost?
 
