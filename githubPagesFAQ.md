@@ -128,6 +128,11 @@ https://mmistakes.github.io/minimal-mistakes/layout-sidebar-custom/
 
 https://mmistakes.github.io/minimal-mistakes/layout-sidebar-nav-list/
 
+## *** Q How to get a TOC in the sidebar?
+
+I'd like a table of contents for the page based on the headers. How is this generated?
+
+https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 
 ## Q How to use liquid templates? (used by Jekyll)
 
