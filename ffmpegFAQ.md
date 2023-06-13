@@ -138,6 +138,20 @@ Did not succeed to select a particular track. All the advice pages seem to give 
 
 Alternatively use Handbrake!
 
+## How can I create a time lapse from a video?
+
+https://stackoverflow.com/questions/41902160/create-time-lapse-video-from-other-video
+
+This takes every 15th frame:
+```
+	ffmpeg -i in.mp4 -vf select='not(mod(n\,15))',setpts=N/FRAME_RATE/TB out.mp4
+```
+
+NB: the results may well be jerky.
+Also you won't be able to glue together the timelapse video and other videos.
+
+A better approach can be just to use Camtasia to speed up the clip you want.
+
 ## Q ffmpeg chokes on an .m4v file. How do I process it?
 
 Just change the suffix to `.mp4`

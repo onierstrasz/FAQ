@@ -1,5 +1,9 @@
 # Camtasia FAQ
 
+## Q How to increase the output resolution?
+
+Optimize for download?
+
 ## Q What is the right size for a screen recording?
 
 You have to both set the *canvas size* for the project as well as the scale for the recording. Change this in the *Project settings*.

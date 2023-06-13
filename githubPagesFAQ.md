@@ -134,6 +134,17 @@ I'd like a table of contents for the page based on the headers. How is this gene
 
 https://mmistakes.github.io/minimal-mistakes/docs/helpers/
 
+For an example, see [identify the champion](https://www.oscar.nierstrasz.org/champion/)
+
+NB:I could not get the toc flag in the YAML header to work.
+Instead I used the deprecated method:
+
+```
+{% include toc icon="cog" title=" " %}
+```
+
+To fix the width, see [table of contents do not look well](https://github.com/academicpages/academicpages.github.io/issues/221)
+
 ## Q How to use liquid templates? (used by Jekyll)
 
 Learn about the Liquid templating system
@@ -230,7 +241,6 @@ Copy-paste from the analytics site with the correct tag.
 </script>
 ```
 
-
 ---
 
 ## Q How to test a Jekyll site on localhost?
@@ -289,3 +299,8 @@ bundle exec jekyll serve
 NB: If you get errors, you may have to install more gems in the script.
 NB: You shouldn't push changes to the Gemfile to the repo. It's a good idea to make a backup and restore it.
 
+# How do I create a draft post?
+
+https://jekyllrb.com/docs/posts/
+
+Put it in the drafts folder and run `jekyll serve --drafts`

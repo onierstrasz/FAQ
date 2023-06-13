@@ -1,5 +1,10 @@
 # VLC FAQ
 
+## Q How do I frame forward or backward?
+
+See Hot Keys.
+E = frame forward
+
 ## Q How do I control VLC from the iPhone?
 
 The Remote 4 VLC app seems to be broken (https://vlcmobileremote.com).
