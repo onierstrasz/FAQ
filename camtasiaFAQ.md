@@ -9,6 +9,10 @@ Optimize for download?
 You have to both set the *canvas size* for the project as well as the scale for the recording. Change this in the *Project settings*.
 To get hi res recording, the canvas dimensions should be 1920x1080, or possibly 1920x1040 after cropping of the Mac toolbar and the GT toolbar. The scale of the screen recording should then be 75%. 
 
+## Q How to rotate a video 90°?
+
+Grab the rotate handle at the center of the video. Afterward scale it to fir.
+
 ## Q How to hide the cursor?
 
 Use [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/).
@@ -52,7 +56,8 @@ A Command+Shift+0
 ## Q Where do I find the right shortcuts?
 
 A 
-https://support.techsmith.com/hc/en-us/articles/360058637951-Camtasia-2021-Shortcuts
+
+https://www.techsmith.com/learn/tutorials/camtasia/camtasia-shortcuts/
 
 ## Q How to step forward and backward?
 
