@@ -1,5 +1,13 @@
 # Camtasia FAQ
 
+## Q What to set up when recording?
+
+- Test the audio levels.
+- Test the screen resolution. (Screen resolution should be high, but for GT, increase the scaling to 1.2 or even 1.5.)
+- Install Cursorcerer to make the mouse cursor disappear.
+- Possibly run `GtShortSlideshow disableHomeSections.`
+
+
 ## Q How to increase the output resolution?
 
 Optimize for download?
