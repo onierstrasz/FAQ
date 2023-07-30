@@ -15,7 +15,9 @@ Optimize for download?
 ## Q What is the right size for a screen recording?
 
 You have to both set the *canvas size* for the project as well as the scale for the recording. Change this in the *Project settings*.
-To get hi res recording, the canvas dimensions should be 1920x1080, or possibly 1920x1040 after cropping of the Mac toolbar and the GT toolbar. The scale of the screen recording should then be 75%. 
+To get hi res recording, the canvas dimensions should be 1920x1080, if you record in full screen mode. Scale the video to fit the project.
+
+Or possibly 1920x1040 after cropping of the Mac toolbar and the GT toolbar. The scale of the screen recording should then be 75%. 
 
 ## Q How to rotate a video 90°?
 
@@ -23,7 +25,7 @@ Grab the rotate handle at the center of the video. Afterward scale it to fir.
 
 ## Q How to hide the cursor?
 
-Use [Cursorcerer](http://doomlaser.com/cursorcerer-hide-your-cursor-at-will/).
+Use [Cursorcerer](http://doomlaser.com/cursorcnerer-hide-your-cursor-at-will/).
 Set the activation key to CTL-SHIFT-X.
 
 ## Q How best to set the lights and colors?
