@@ -254,6 +254,13 @@ brew install chruby ruby-install xz
 ruby-install ruby 3.1.3
 ```
 
+NB: The latest version now is 3.2.2
+
+```
+brew install chruby ruby-install xz
+ruby-install ruby 3.2.2
+```
+
 Run this script from the project folder to serve the website from `http://localhost:4000`
 
 ```
