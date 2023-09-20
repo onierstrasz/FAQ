@@ -1,5 +1,4 @@
-
-# LINUX FAQ
+# LINUX FAQ.
 
 ## Q How do I install updates?
 ```

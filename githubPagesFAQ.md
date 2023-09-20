@@ -241,6 +241,13 @@ Copy-paste from the analytics site with the correct tag.
 </script>
 ```
 
+## Q How to add the Mastodon link on the author profile?
+
+- Add author.mastodon URL to `_config.yml`
+- Add `$mastodon-color : #5e22c5;` to `_sass/_variables.scss`
+- Add `.fa-mastodon,.fa-mastodon-square` to `_sass/_utilities.scss`
+- Add new line to `_includes/author-profile.html`
+
 ---
 
 ## Q How to test a Jekyll site on localhost?
