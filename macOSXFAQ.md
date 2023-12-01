@@ -1,5 +1,9 @@
 # Mac OSX FAQ
 
+## Q How can I right-click with a trackpad?
+
+Use two fingers to click.
+
 ## Q What are the Mac Mail keyboard shortcuts?
 
 See: https://support.apple.com/en-gb/guide/mail/mlhlb94f262b/mac

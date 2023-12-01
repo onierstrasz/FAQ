@@ -9,3 +9,4 @@ Set `Auto Waypoints` in the `Standard Map` configuration.
 
 iCloud syncing does not seem to work.
 Instead can directly export everything via airdrop to another device.
+Once you transfer it, select it and share it to PocketEarth to import it.
