@@ -1,5 +1,9 @@
 # Mac OSX FAQ
 
+## How do I change where/how screenshots are saved?
+
+Open the Screenshot app (in Applications>Utilities, or CMD-SHIFT-5) and select Options.
+
 ## Q How can I right-click with a trackpad?
 
 Use two fingers to click.

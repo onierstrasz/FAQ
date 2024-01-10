@@ -25,6 +25,7 @@ Right-click within the table and select `Refresh`.
 ## Q How to get excel to recognize dates in M-D format?
 - `Mac System Settings > Language and Region > Advanced > Dates`
   Set the Short date to 1976-04-01
+- As of Sonoma, also set the Language to UK English, not US English
 
 ## Q What to do when excel says it cannot update automatic links?
 - Search for .xl in formulas in Workbook to find the external links
