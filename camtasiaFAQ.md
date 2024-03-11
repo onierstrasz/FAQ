@@ -7,7 +7,6 @@
 - Install Cursorcerer to make the mouse cursor disappear.
 - Possibly run `GtShortSlideshow disableHomeSections.`
 
-
 ## Q How to increase the output resolution?
 
 Optimize for download?
