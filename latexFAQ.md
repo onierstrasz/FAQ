@@ -53,9 +53,12 @@ A Use `\textbackslash`
 ## Q How do I turn on page numbering for ieee style?
 A `\pagestyle{plain}`
 
-## Q How do I turn on page numbering for acm sigplan style?
-A `\documentclass[10pt,preprint]{sigplanconf}`
+## Q How do I prepare a review draft for acm sigplan style?
+A
 
-## Q How do I turn on page numbering for acm proceedings style? (acm_proc_article-sp)
-A ???
-
+This will use single-column, double-spaced, with line numbering:
+```
+\documentclass[manuscript]{acmart}
+\usepackage{lineno}
+\linenumbers
+```
