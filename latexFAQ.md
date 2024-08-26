@@ -2,6 +2,16 @@
 
 See also http://scg.unibe.ch/wiki/faq/latex
 
+## Q How to prepare an Arxiv preprint?
+
+A For ACM publications, use this:
+
+```
+	\documentclass[acmsmall,screen,authorversion,nonacm]{acmart}
+```
+
+See https://www.micahsmith.com/blog/2021/02/sharing-a-preprint-using-acmart/
+
 ## Q How do I strikethrough text?
 
 A `\usepackage[normalem]{ulem}` gives you `\sout{text}`.
