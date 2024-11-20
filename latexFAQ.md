@@ -2,6 +2,36 @@
 
 See also http://scg.unibe.ch/wiki/faq/latex
 
+## Q How to get horizontal lists with enumlist?
+
+For ACM publications, paralist is not supported, but enumitem is.
+To get horizonal lists, you can use:
+
+```
+\usepackage[inline]{enumitem}
+```
+
+and
+
+```
+\begin{enumerate*}[label=(\roman*)]
+\item the source code, and
+\item the running system.
+\end{enumerate*}
+```
+
+NB: This can mess up other lists. To get a proper vertical itemize list, you can now use:
+
+```
+\newlength{\itemizeMargin}
+\setlength{\itemizeMargin}{12pt}
+
+\begin{itemize}[leftmargin = \itemizeMargin, label = ---]
+\item ...
+\end{itemize}
+
+```
+
 ## Q How to prepare an Arxiv preprint?
 
 A For ACM publications, use this:

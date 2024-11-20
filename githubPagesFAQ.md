@@ -3,6 +3,10 @@
 ## To do
 Provide some structure to this FAQ ...
 
+## Q How to update the templates? (open)
+
+The website is a clone of the academicpages repo. How can we get updates without breaking stuff?
+
 ## Q How to set up a GitHub Pages repo?
 
 Any repo can be a GH pages site. You can have just one user site which must be defined in a repo called `username.github.io`, but any other repo can be a GHP site as well. 
@@ -243,10 +247,13 @@ Copy-paste from the analytics site with the correct tag.
 
 ## Q How to add the Mastodon link on the author profile?
 
+Same instructions for Bluesky
+
 - Add author.mastodon URL to `_config.yml`
 - Add `$mastodon-color : #5e22c5;` to `_sass/_variables.scss`
 - Add `.fa-mastodon,.fa-mastodon-square` to `_sass/_utilities.scss`
 - Add new line to `_includes/author-profile.html`
+- Posssibly update or replace the `_sass/vendor` folder and relevant parts of the `assets` folder. (NB: there are some custom assets in `assets/images` -- don't trash those.)
 
 ---
 
