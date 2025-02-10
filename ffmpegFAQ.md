@@ -1,5 +1,16 @@
 # ffmpeg FAQ
 
+##Q How do I change the aspect ratio?
+
+We start from 720x480 which is 3:2.
+We want 16:9, so 800x450, for example
+
+https://stackoverflow.com/questions/24087249/ffmpeg-change-resolution-of-the-video-with-aspect-ratio#38869147
+
+ffmpeg -i <input> -vf "scale=800:450,setdar=16/9" <output>
+
+You need not only to scale it but also to set the AR.
+
 ## Q How do I join two mp4 files into one?
 
 If you have two mp4 files of the same format, you can create a list file that looks like this:
@@ -73,6 +84,7 @@ To keep selected subtitles use:
 		-t 00:12:00.000 \
 		Planet.Earth.Diaries.S01E01.avi
 ```
+
 ## Q How do I downsample a video?
 
 Sample script:
@@ -99,6 +111,7 @@ Set the CRF quality
 ```
 	ffmpeg -i input.avi -c:a copy -crf 23 output.avi
 ```
+
 ## Q What is a good CRF level to set?
 
 0 is lossless. 18-23 is usually good. “higher” values can be rather poor.
