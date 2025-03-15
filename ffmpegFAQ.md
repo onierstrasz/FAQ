@@ -38,8 +38,8 @@ Use mpeg4 video and mpeg3 audio
   CRF=20
 	time ffmpeg -i "${IN}" \
 		-c:v libx264 \
-    -crf ${CRF} \
-    -c:a aac \
+ 	  	-crf ${CRF} \
+   	 	-c:a aac \
 		"${BASE}-LG-CRF${CRF}.mkv"
 ```
 Works for both USB sticks and casting from VLC to chromecast.
