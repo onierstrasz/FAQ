@@ -1,5 +1,11 @@
 # VLC FAQ
 
+## Q What is the shortcut for changing the audio track?
+
+It's: l
+
+https://keycombiner.com/collections/vlc-player/
+
 ## Q How do I frame forward or backward?
 
 See Hot Keys.

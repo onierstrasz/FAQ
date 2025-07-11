@@ -32,7 +32,7 @@ Roughly 10 minutes per hour of film.
 
 ## Q How should I prepare a video to watch on the LG TV?
 
-Use mpeg4 video and mpeg3 audio
+Use mpeg4 (or mkv?) video and mpeg3 audio
 
 ```
   CRF=20
